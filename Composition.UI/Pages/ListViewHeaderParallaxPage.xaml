@@ -1,0 +1,56 @@
+﻿<Page
+    x:Class="Composition.UI.Pages.ListViewHeaderParallaxPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Composition.UI"
+       xmlns:interactivity="using:Microsoft.Xaml.Interactivity"
+    xmlns:behaviors="using:Composition.UI.Behaviors"
+  xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <ListView x:Name="LoremList">
+            <ListView.Header>
+                <Image Source="ms-appx:///Assets/Guadeloupe.jpg" x:Name="ParallaxImage" Stretch="UniformToFill"/>
+            </ListView.Header>
+            <ListView.ItemContainerStyle>
+                <Style TargetType="ListViewItem">
+                    <Setter Property="Background" Value="White"/>
+                </Style>
+            </ListView.ItemContainerStyle>
+            <x:String>Lorem ipsum dolor sit amet, consectetur adipiscing.</x:String>
+            <x:String>Nunc fringilla ultrices est eu ornare.</x:String>
+            <x:String>Suspendisse purus massa, iaculis in finibus dictum, gravida vel purus.</x:String>
+            <x:String>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</x:String>
+            <x:String>Donec vitae dolor imperdiet, vehicula enim quis, mollis tellus.</x:String>
+            <x:String>Donec placerat diam sed est porttitor, venenatis semper mauris tempus.</x:String>
+            <x:String>Sed placerat ipsum enim, quis porta nibh accumsan sit amet.</x:String>
+            <x:String>Etiam tempus dapibus dolor, eget sollicitudin risus cursus eget.</x:String>
+            <x:String>Vestibulum non rhoncus velit.</x:String>
+            <x:String>Vestibulum volutpat, lacus quis laoreet accumsan, erat diam dignissim ligula, sit amet molestie purus erat eget tortor.</x:String>
+            <x:String>Vestibulum posuere consequat libero, at fermentum tellus tempus eget.</x:String>
+            <x:String>Curabitur viverra nisl a augue porta luctus.</x:String>
+            <x:String>Duis sodales metus et purus finibus, at tincidunt felis porta.</x:String>
+            <x:String>Fusce elementum ut diam ut sodales.</x:String>
+            <x:String>Nunc eget varius lectus.</x:String>
+            <x:String>Fusce nec rhoncus arcu.</x:String>
+            <x:String>Nunc feugiat, nulla non luctus dapibus, justo odio tincidunt libero, mattis commodo sem nulla sed tellus.</x:String>
+            <x:String>Aliquam ut condimentum est, id euismod turpis.</x:String>
+            <x:String>Donec nec orci nulla.</x:String>
+            <x:String>Suspendisse faucibus mollis sapien, ac congue nulla aliquet vel.</x:String>
+            <x:String>In hac habitasse platea dictumst.</x:String>
+            <x:String>Duis dapibus sem a ullamcorper vestibulum.</x:String>
+            <x:String>Aliquam varius imperdiet tortor vitae elementum</x:String>
+            <x:String>Curabitur eget diam a neque blandit egestas.</x:String>
+            <x:String>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</x:String>
+            <x:String>Phasellus pulvinar laoreet ipsum ut scelerisque.</x:String>
+            <x:String>Praesent eget molestie sem.</x:String>
+            <x:String>Sed pretium suscipit orci, mollis interdum purus vestibulum vitae. Curabitur accumsan nec enim eu imperdiet. Fusce nec lectus mollis, laoreet odio vel, rhoncus nisi. Nulla mi neque, imperdiet nec diam et, tincidunt blandit metus. Quisque bibendum nisl a orci efficitur, sit amet volutpat nisi convallis. Sed lobortis ac lacus et volutpat. Nullam sodales porta nibh, eget semper augue fermentum sit amet. Phasellus sed nibh volutpat, fringilla ligula ut, lacinia dolor. 
+            </x:String>
+        </ListView>
+        <interactivity:Interaction.Behaviors>
+            <behaviors:ParallaxBehavior ParallaxContent="{Binding ElementName=ParallaxImage}" ScrollingContent="{Binding ElementName=LoremList}" ParallaxMultiplier="-0.2"/>
+        </interactivity:Interaction.Behaviors>
+    </Grid>
+</Page>
