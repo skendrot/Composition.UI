@@ -76,11 +76,5 @@ namespace Composition.UI.Behaviors
             var b = d as ParallaxBehavior;
             b.AssignParallax();
         }
-
-        private static void OnScrollingContentChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
-        {
-            var b = d as ParallaxBehavior;
-            b.AssignParallax();
-        }
     }
 }
