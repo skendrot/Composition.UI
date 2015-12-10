@@ -9,7 +9,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <ScrollViewer x:Name="Scroller">
+        <ScrollViewer>
             <StackPanel>
                 <Image Source="ms-appx:///Assets/Guadeloupe.jpg" x:Name="ParallaxImage"/>
                 <Border Background="White">
@@ -125,9 +125,9 @@ Morbi sed mauris nibh. Nulla id ligula luctus, auctor arcu sit amet, maximus met
                     </TextBlock>
                 </Border>
             </StackPanel>
+            <interactivity:Interaction.Behaviors>
+                <behaviors:ParallaxBehavior ParallaxContent="{Binding ElementName=ParallaxImage}" ParallaxMultiplier="-.4"/>
+            </interactivity:Interaction.Behaviors>
         </ScrollViewer>
-        <interactivity:Interaction.Behaviors>
-            <behaviors:ParallaxBehavior ParallaxContent="{Binding ElementName=ParallaxImage}" ScrollingContent="{Binding ElementName=Scroller}" ParallaxMultiplier="-.4"/>
-        </interactivity:Interaction.Behaviors>
     </Grid>
 </Page>

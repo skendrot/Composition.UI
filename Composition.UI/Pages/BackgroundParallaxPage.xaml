@@ -11,9 +11,9 @@
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Image Source="ms-appx:///Assets/Guadeloupe.jpg" x:Name="ParallaxImage" Stretch="Fill"/>
-        <ScrollViewer x:Name="Scroller">
+        <ScrollViewer>
             <StackPanel>
-                    <TextBlock HorizontalAlignment="Stretch" TextWrapping="WrapWholeWords" FontSize="30" Foreground="Black">
+                <TextBlock HorizontalAlignment="Stretch" TextWrapping="WrapWholeWords" FontSize="30" Foreground="Black">
                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc fringilla ultrices est eu ornare. Suspendisse purus massa, iaculis in finibus dictum, gravida vel purus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec vitae dolor imperdiet, vehicula enim quis, mollis tellus. Donec placerat diam sed est porttitor, venenatis semper mauris tempus. Sed placerat ipsum enim, quis porta nibh accumsan sit amet. Etiam tempus dapibus dolor, eget sollicitudin risus cursus eget. Vestibulum non rhoncus velit. Vestibulum volutpat, lacus quis laoreet accumsan, erat diam dignissim ligula, sit amet molestie purus erat eget tortor. Vestibulum posuere consequat libero, at fermentum tellus tempus eget. Curabitur viverra nisl a augue porta luctus. 
 
 Duis sodales metus et purus finibus, at tincidunt felis porta. Fusce elementum ut diam ut sodales. Nunc eget varius lectus. Fusce nec rhoncus arcu. Nunc feugiat, nulla non luctus dapibus, justo odio tincidunt libero, mattis commodo sem nulla sed tellus. Aliquam ut condimentum est, id euismod turpis. Donec nec orci nulla. Suspendisse faucibus mollis sapien, ac congue nulla aliquet vel. In hac habitasse platea dictumst. Duis dapibus sem a ullamcorper vestibulum. 
@@ -122,12 +122,11 @@ Fusce accumsan sodales massa et lacinia. Fusce vel nisi ante. Ut congue dolor in
 
 Morbi sed mauris nibh. Nulla id ligula luctus, auctor arcu sit amet, maximus metus. Phasellus sodales in mi lacinia pulvinar. Sed vitae nisl magna. Vivamus ut ex vel nisl blandit volutpat. Integer nunc sapien, maximus a varius vitae, accumsan in felis. Suspendisse efficitur in ex quis lobortis. Ut aliquet ex mi, eget fermentum sem faucibus quis. Fusce aliquam lorem sit amet augue ullamcorper, rutrum varius dui convallis. Sed et libero odio. Aliquam sodales, dolor ut varius consequat, lacus orci volutpat turpis, in mattis massa orci at neque. Integer ultrices lectus mollis ex posuere, ac semper nulla suscipit. Etiam mauris massa, tristique eu nibh et, sagittis vestibulum lectus.
 
-                    </TextBlock>
+                </TextBlock>
             </StackPanel>
+            <interactivity:Interaction.Behaviors>
+                <behaviors:ParallaxBehavior ParallaxContent="{Binding ElementName=ParallaxImage}"/>
+            </interactivity:Interaction.Behaviors>
         </ScrollViewer>
-        <interactivity:Interaction.Behaviors>
-            <behaviors:ParallaxBehavior ParallaxContent="{Binding ElementName=ParallaxImage}" ScrollingContent="{Binding ElementName=Scroller}"/>
-        </interactivity:Interaction.Behaviors>
-
     </Grid>
 </Page>

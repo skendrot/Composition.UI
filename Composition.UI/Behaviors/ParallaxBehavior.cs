@@ -24,23 +24,7 @@ namespace Composition.UI.Behaviors
             typeof(UIElement), 
             typeof(ParallaxBehavior), 
             new PropertyMetadata(null, OnParallaxContentChanged));
-
-        /// <summary>
-        /// Gets or sets the element that controls the scrolling. 
-        /// This can be ScrollViewer or any control which contains a ScrollViewer like a ListView.
-        /// </summary>
-        public FrameworkElement ScrollingContent
-        {
-            get { return (FrameworkElement)GetValue(ScrollingContentProperty); }
-            set { SetValue(ScrollingContentProperty, value); }
-        }
-
-        public static readonly DependencyProperty ScrollingContentProperty = DependencyProperty.Register(
-            "ScrollingContent", 
-            typeof(FrameworkElement), 
-            typeof(ParallaxBehavior), 
-            new PropertyMetadata(null, OnScrollingContentChanged));
-
+        
         /// <summary>
         /// Gets or sets the rate at which the ParallaxContent parallaxes.
         /// </summary>
@@ -65,12 +49,12 @@ namespace Composition.UI.Behaviors
         private void AssignParallax()
         {
             if (ParallaxContent == null) return;
-            if (ScrollingContent == null) return;
+            if (AssociatedObject == null) return;
 
-            var scroller = ScrollingContent as ScrollViewer;
+            var scroller = AssociatedObject as ScrollViewer;
             if (scroller == null)
             {
-                scroller = ScrollingContent.GetChildOfType<ScrollViewer>();
+                scroller = AssociatedObject.GetChildOfType<ScrollViewer>();
             }
             if (scroller == null) return;
 

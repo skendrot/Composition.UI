@@ -10,7 +10,7 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <ListView x:Name="LoremList">
+        <ListView>
             <ListView.Header>
                 <Image Source="ms-appx:///Assets/Guadeloupe.jpg" x:Name="ParallaxImage" Stretch="UniformToFill"/>
             </ListView.Header>
@@ -48,9 +48,9 @@
             <x:String>Praesent eget molestie sem.</x:String>
             <x:String>Sed pretium suscipit orci, mollis interdum purus vestibulum vitae. Curabitur accumsan nec enim eu imperdiet. Fusce nec lectus mollis, laoreet odio vel, rhoncus nisi. Nulla mi neque, imperdiet nec diam et, tincidunt blandit metus. Quisque bibendum nisl a orci efficitur, sit amet volutpat nisi convallis. Sed lobortis ac lacus et volutpat. Nullam sodales porta nibh, eget semper augue fermentum sit amet. Phasellus sed nibh volutpat, fringilla ligula ut, lacinia dolor. 
             </x:String>
+            <interactivity:Interaction.Behaviors>
+                <behaviors:ParallaxBehavior ParallaxContent="{Binding ElementName=ParallaxImage}" ParallaxMultiplier="-0.2"/>
+            </interactivity:Interaction.Behaviors>
         </ListView>
-        <interactivity:Interaction.Behaviors>
-            <behaviors:ParallaxBehavior ParallaxContent="{Binding ElementName=ParallaxImage}" ScrollingContent="{Binding ElementName=LoremList}" ParallaxMultiplier="-0.2"/>
-        </interactivity:Interaction.Behaviors>
     </Grid>
 </Page>
