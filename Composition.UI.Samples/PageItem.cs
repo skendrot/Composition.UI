@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Composition.UI
+namespace Composition.UI.Samples
 {
     public class PageItem
     {

@@ -7,15 +7,15 @@
   IgnorableNamespaces="uap mp">
 
   <Identity
-    Name="86e432b9-066f-4894-bc5a-883439913954"
-    Publisher="CN=skend"
+    Name="97f7c145-7ff0-419f-b0b8-934a59f3cc60"
+    Publisher="CN=Shawn Kendrot"
     Version="1.0.0.0" />
 
-  <mp:PhoneIdentity PhoneProductId="86e432b9-066f-4894-bc5a-883439913954" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+  <mp:PhoneIdentity PhoneProductId="97f7c145-7ff0-419f-b0b8-934a59f3cc60" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
   <Properties>
-    <DisplayName>Composition.UI</DisplayName>
-    <PublisherDisplayName>skend</PublisherDisplayName>
+    <DisplayName>Composition.UI.Samples</DisplayName>
+    <PublisherDisplayName>Shawn Kendrot</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
 
@@ -30,12 +30,12 @@
   <Applications>
     <Application Id="App"
       Executable="$targetnametoken$.exe"
-      EntryPoint="Composition.UI.App">
+      EntryPoint="Composition.UI.Samples.App">
       <uap:VisualElements
-        DisplayName="Composition.UI"
+        DisplayName="Composition.UI.Samples"
         Square150x150Logo="Assets\Square150x150Logo.png"
         Square44x44Logo="Assets\Square44x44Logo.png"
-        Description="Composition.UI"
+        Description="Composition.UI.Samples"
         BackgroundColor="transparent">
         <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png"/>
         <uap:SplashScreen Image="Assets\SplashScreen.png" />

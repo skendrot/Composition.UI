@@ -1,8 +1,8 @@
 ﻿<Application
-    x:Class="Composition.UI.App"
+    x:Class="Composition.UI.Samples.App"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:Composition.UI"
+    xmlns:local="using:Composition.UI.Samples"
     RequestedTheme="Light">
 
 </Application>

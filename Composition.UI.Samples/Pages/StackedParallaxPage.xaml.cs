@@ -15,14 +15,14 @@ using Windows.UI.Xaml.Navigation;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
-namespace Composition.UI.Pages
+namespace Composition.UI.Samples.Pages
 {
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class BackgroundParallaxPage : Page
+    public sealed partial class StackedParallaxPage : Page
     {
-        public BackgroundParallaxPage()
+        public StackedParallaxPage()
         {
             this.InitializeComponent();
         }
