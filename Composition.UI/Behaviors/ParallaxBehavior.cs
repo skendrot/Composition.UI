@@ -62,10 +62,10 @@ namespace Composition.UI.Behaviors
 
             Compositor compositor = scrollerViewerManipulation.Compositor;
 
-            ExpressionAnimation expression = compositor.CreateExpressionAnimation("ScrollManipululation.Translation.Y * ParallaxMultiplier");
+            ExpressionAnimation expression = compositor.CreateExpressionAnimation("ScrollManipulation.Translation.Y * ParallaxMultiplier");
 
             expression.SetScalarParameter("ParallaxMultiplier", (float)ParallaxMultiplier);
-            expression.SetReferenceParameter("ScrollManipululation", scrollerViewerManipulation);
+            expression.SetReferenceParameter("ScrollManipulation", scrollerViewerManipulation);
 
             Visual textVisual = ElementCompositionPreview.GetElementVisual(ParallaxContent);
             textVisual.StartAnimation("Offset.Y", expression);
