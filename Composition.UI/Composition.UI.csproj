@@ -108,6 +108,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Behaviors\ParallaxBehavior.cs" />
+    <Compile Include="Behaviors\StretchyHeaderBehavior.cs" />
     <Compile Include="Extensions\VisualTreeHelperExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\Composition.UI.rd.xml" />
