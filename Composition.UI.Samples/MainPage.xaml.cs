@@ -33,6 +33,7 @@ namespace Composition.UI.Samples
                 new PageItem { Name="Stacked Parallax", Page = typeof(StackedParallaxPage) },
                 new PageItem { Name="Background Parallax", Page=typeof(BackgroundParallaxPage) },
                 new PageItem { Name="ListView Header Parallax", Page=typeof(ListViewHeaderParallaxPage) },
+                new PageItem { Name="Stretchy Header", Page=typeof(StretchyHeaderPage) },
                 //new PageItem { Name="Stacked with controls", Page=typeof(ParallaxPanelPage) },
                 //new PageItem { Name="Circle Mask", Page=typeof(CircleMaskPage) },
             };

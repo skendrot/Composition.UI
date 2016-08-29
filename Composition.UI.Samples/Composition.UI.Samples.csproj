@@ -108,6 +108,9 @@
     <Compile Include="Pages\StackedParallaxPage.xaml.cs">
       <DependentUpon>StackedParallaxPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\StretchyHeaderPage.xaml.cs">
+      <DependentUpon>StretchyHeaderPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -148,6 +151,10 @@
     <Page Include="Pages\StackedParallaxPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\StretchyHeaderPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
