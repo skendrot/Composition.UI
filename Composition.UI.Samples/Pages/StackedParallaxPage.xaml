@@ -126,7 +126,7 @@ Morbi sed mauris nibh. Nulla id ligula luctus, auctor arcu sit amet, maximus met
                 </Border>
             </StackPanel>
             <interactivity:Interaction.Behaviors>
-                <behaviors:ParallaxBehavior ParallaxContent="{Binding ElementName=ParallaxImage}" ParallaxMultiplier="-.4"/>
+                <behaviors:ParallaxBehavior ParallaxContent="{Binding ElementName=ParallaxImage}" ParallaxMultiplier=".4"/>
             </interactivity:Interaction.Behaviors>
         </ScrollViewer>
     </Grid>
