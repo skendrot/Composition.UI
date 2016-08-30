@@ -58,7 +58,7 @@ namespace Composition.UI.Behaviors
             var compositor = scrollerViewerManipulation.Compositor;
 
             var scaleAnimation = compositor.CreateExpressionAnimation(
-                "Lerp(1, 1+Amount, Clamp(ScrollManipulation.Translation.Y/50,0,1))");
+                "Lerp(1, 1+Amount, Clamp(ScrollManipulation.Translation.Y/50, 0, 1))");
             scaleAnimation.SetScalarParameter("Amount", (float)StretchyFactor);
             scaleAnimation.SetReferenceParameter("ScrollManipulation", scrollerViewerManipulation);
 
