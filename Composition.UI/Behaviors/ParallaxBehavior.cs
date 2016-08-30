@@ -62,15 +62,9 @@ namespace Composition.UI.Behaviors
 
             Compositor compositor = scrollerViewerManipulation.Compositor;
 
-            ExpressionAnimation expression;
-            if (ParallaxMultiplier > 0)
-            {
-                expression = compositor.CreateExpressionAnimation("ScrollManipulation.Translation.Y * ParallaxMultiplier - ScrollManipulation.Translation.Y");
-            }
-            else
-            {
-                expression = compositor.CreateExpressionAnimation("ScrollManipulation.Translation.Y * ParallaxMultiplier");
-            }
+            var expression = compositor.CreateExpressionAnimation(ParallaxMultiplier > 0 
+                ? "ScrollManipulation.Translation.Y * ParallaxMultiplier - ScrollManipulation.Translation.Y" 
+                : "ScrollManipulation.Translation.Y * ParallaxMultiplier");
 
             expression.SetScalarParameter("ParallaxMultiplier", (float)ParallaxMultiplier);
             expression.SetReferenceParameter("ScrollManipulation", scrollerViewerManipulation);
