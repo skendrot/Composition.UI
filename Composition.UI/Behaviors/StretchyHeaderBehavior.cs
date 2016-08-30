@@ -57,8 +57,10 @@ namespace Composition.UI.Behaviors
 
             var compositor = scrollerViewerManipulation.Compositor;
 
+            // See documentation for Lerp and Clamp: 
+            // https://msdn.microsoft.com/en-us/windows/uwp/graphics/composition-animation
             var scaleAnimation = compositor.CreateExpressionAnimation(
-                "Lerp(1, 1+Amount, Clamp(ScrollManipulation.Translation.Y/50, 0, 1))");
+                 "Lerp(1, 1+Amount, Clamp(ScrollManipulation.Translation.Y/50, 0, 1))");
             scaleAnimation.SetScalarParameter("Amount", (float)StretchyFactor);
             scaleAnimation.SetReferenceParameter("ScrollManipulation", scrollerViewerManipulation);
 
@@ -66,7 +68,7 @@ namespace Composition.UI.Behaviors
             var backgroundImageSize = new Vector2((float)AssociatedObject.ActualWidth, (float)AssociatedObject.ActualHeight);
             visual.Size = backgroundImageSize;
 
-            // CenterPoint defaults to the top left (0,0)
+            // CenterPoint defaults to the top left (0,0). We want the strecth to occur from the center
             visual.CenterPoint = new Vector3(backgroundImageSize / 2, 1);
             visual.StartAnimation("Scale.X", scaleAnimation);
             visual.StartAnimation("Scale.Y", scaleAnimation);
