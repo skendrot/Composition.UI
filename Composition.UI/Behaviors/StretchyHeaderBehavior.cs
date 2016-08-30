@@ -22,7 +22,7 @@ namespace Composition.UI.Behaviors
             nameof(StretchyFactor),
             typeof(double),
             typeof(StretchyHeaderBehavior),
-            new PropertyMetadata(0.25));
+            new PropertyMetadata(0.5));
 
         protected override void OnAttached()
         {
