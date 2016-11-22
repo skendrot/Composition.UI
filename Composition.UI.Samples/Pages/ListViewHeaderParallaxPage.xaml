@@ -1,18 +1,18 @@
-﻿<Page
-    x:Class="Composition.UI.Samples.Pages.ListViewHeaderParallaxPage"
-    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:Composition.UI"
-       xmlns:interactivity="using:Microsoft.Xaml.Interactivity"
-    xmlns:behaviors="using:Composition.UI.Behaviors"
-  xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d">
+﻿<Page x:Class="Composition.UI.Samples.Pages.ListViewHeaderParallaxPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:comp="using:Composition.UI"
+      xmlns:interactivity="using:Microsoft.Xaml.Interactivity"
+      xmlns:behaviors="using:Composition.UI.Behaviors"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <ListView>
+        <ListView x:Name="List">
             <ListView.Header>
-                <Image Source="ms-appx:///Assets/Guadeloupe.jpg" x:Name="ParallaxImage" Stretch="UniformToFill"/>
+                <Image Source="ms-appx:///Assets/Guadeloupe.jpg" x:Name="ParallaxImage" Stretch="UniformToFill"
+                       comp:ParallaxService.ScrollingElement="{Binding ElementName=List}"/>
             </ListView.Header>
             <ListView.ItemContainerStyle>
                 <Style TargetType="ListViewItem">
@@ -46,11 +46,11 @@
             <x:String>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</x:String>
             <x:String>Phasellus pulvinar laoreet ipsum ut scelerisque.</x:String>
             <x:String>Praesent eget molestie sem.</x:String>
-            <x:String>Sed pretium suscipit orci, mollis interdum purus vestibulum vitae. Curabitur accumsan nec enim eu imperdiet. Fusce nec lectus mollis, laoreet odio vel, rhoncus nisi. Nulla mi neque, imperdiet nec diam et, tincidunt blandit metus. Quisque bibendum nisl a orci efficitur, sit amet volutpat nisi convallis. Sed lobortis ac lacus et volutpat. Nullam sodales porta nibh, eget semper augue fermentum sit amet. Phasellus sed nibh volutpat, fringilla ligula ut, lacinia dolor. 
+            <x:String>Sed pretium suscipit orci, mollis interdum purus vestibulum vitae. Curabitur accumsan nec enim eu imperdiet. Fusce nec lectus mollis, laoreet odio vel, rhoncus nisi. Nulla mi neque, imperdiet nec diam et, tincidunt blandit metus. Quisque bibendum nisl a orci efficitur, sit amet volutpat nisi convallis. Sed lobortis ac lacus et volutpat. Nullam sodales porta nibh, eget semper augue fermentum sit amet. Phasellus sed nibh volutpat, fringilla ligula ut, lacinia dolor.
             </x:String>
-            <interactivity:Interaction.Behaviors>
+            <!--<interactivity:Interaction.Behaviors>
                 <behaviors:ParallaxBehavior ParallaxContent="{Binding ElementName=ParallaxImage}" ParallaxMultiplier="-0.2"/>
-            </interactivity:Interaction.Behaviors>
+            </interactivity:Interaction.Behaviors>-->
         </ListView>
     </Grid>
 </Page>

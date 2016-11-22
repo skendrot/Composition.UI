@@ -5,13 +5,17 @@
     xmlns:local="using:Composition.UI"
     xmlns:interactivity="using:Microsoft.Xaml.Interactivity"
     xmlns:behaviors="using:Composition.UI.Behaviors"
+      xmlns:comp="using:Composition.UI"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <ScrollViewer>
+        <ScrollViewer x:Name="Scroller">
             <StackPanel>
-                <Image Source="ms-appx:///Assets/Guadeloupe.jpg" x:Name="ParallaxImage"/>
+                <Image Source="ms-appx:///Assets/Guadeloupe.jpg" x:Name="ParallaxImage"
+                       MaxHeight="500"
+                       Stretch="UniformToFill"
+                       comp:ParallaxService.ScrollingElement="{Binding ElementName=Scroller}"/>
                 <Border Background="White">
                     <TextBlock HorizontalAlignment="Stretch" TextWrapping="WrapWholeWords" FontSize="30" Foreground="Black">
                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc fringilla ultrices est eu ornare. Suspendisse purus massa, iaculis in finibus dictum, gravida vel purus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec vitae dolor imperdiet, vehicula enim quis, mollis tellus. Donec placerat diam sed est porttitor, venenatis semper mauris tempus. Sed placerat ipsum enim, quis porta nibh accumsan sit amet. Etiam tempus dapibus dolor, eget sollicitudin risus cursus eget. Vestibulum non rhoncus velit. Vestibulum volutpat, lacus quis laoreet accumsan, erat diam dignissim ligula, sit amet molestie purus erat eget tortor. Vestibulum posuere consequat libero, at fermentum tellus tempus eget. Curabitur viverra nisl a augue porta luctus. 
@@ -125,9 +129,9 @@ Morbi sed mauris nibh. Nulla id ligula luctus, auctor arcu sit amet, maximus met
                     </TextBlock>
                 </Border>
             </StackPanel>
-            <interactivity:Interaction.Behaviors>
+            <!--<interactivity:Interaction.Behaviors>
                 <behaviors:ParallaxBehavior ParallaxContent="{Binding ElementName=ParallaxImage}" ParallaxMultiplier=".4"/>
-            </interactivity:Interaction.Behaviors>
+            </interactivity:Interaction.Behaviors>-->
         </ScrollViewer>
     </Grid>
 </Page>
